@@ -1,0 +1,1 @@
+{"private":true,"scripts":{"auth:apps-script-api":"node scripts/auth-apps-script-api.mjs"}}

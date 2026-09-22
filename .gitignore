@@ -1,0 +1,60 @@
+﻿# Operating systems
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+service-account.json
+
+# Google Apps Script local configuration
+.clasp.json
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.log
+
+# Generated exports
+dist/
+build/
+coverage/
+
+# Local spreadsheet exports
+*.xlsx
+*.xls
+*.csv
+!data/demo/*.csv
+!data/imports/*.csv
+
+# Legacy backups stay local by default
+_legacy_before_rebuild/
+
+.clasprc.json
+.clasp.local.json
+.apps-script-deployment/
+*.apps-script-backup.json
+
+# Local DEV automation state
+dev-pipeline-config.local.json
+scripts/dev-pipeline-config.json
+.dev-reports/
+.dev-secrets/
+scripts/client_secret.json
