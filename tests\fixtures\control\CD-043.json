@@ -1,0 +1,139 @@
+﻿{
+    "schema_version":  "1.0",
+    "test_id":  "CD-043",
+    "name":  "Высокая концентрация результата",
+    "description":  "Вымышленный контрольный набор: Высокая концентрация результата",
+    "test_types":  [
+                       "recommendation"
+                   ],
+    "spec_reference":  {
+                           "document":  "docs/CONTROL_DATA_SPEC.md",
+                           "section":  "53"
+                       },
+    "financial_logic_reference":  [
+                                      "docs/FINANCIAL_LOGIC.md"
+                                  ],
+    "status":  "ready",
+    "synthetic_data":  true,
+    "periods":  [
+                    {
+                        "period_id":  "PER-2026-01",
+                        "date_from":  "2026-01-01",
+                        "date_to":  "2026-01-31",
+                        "period_status":  "open",
+                        "completed_working_days":  null,
+                        "total_working_days":  null
+                    }
+                ],
+    "settings":  {
+
+                 },
+    "tables":  {
+                   "services":  [
+
+                                ],
+                   "masters":  [
+
+                               ],
+                   "compensation_schemes":  [
+
+                                            ],
+                   "operations":  [
+
+                                  ],
+                   "expenses":  [
+
+                                ],
+                   "shifts":  [
+
+                              ],
+                   "materials":  [
+
+                                 ],
+                   "refunds":  [
+
+                               ],
+                   "obligations":  [
+
+                                   ],
+                   "plans":  [
+
+                             ],
+                   "adjustments":  [
+
+                                   ],
+                   "scenarios":  [
+
+                                 ],
+                   "period_events":  [
+
+                                     ]
+               },
+    "expected":  {
+                     "metrics":  [
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "team_direct_result",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "money",
+                                         "expected_value":  100000,
+                                         "dimension_id":  "SALON-001"
+                                     },
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "master_direct_result",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "money",
+                                         "expected_value":  70000,
+                                         "dimension_id":  "SALON-001"
+                                     },
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "team_result_share",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "ratio",
+                                         "expected_value":  0.7,
+                                         "dimension_id":  "SALON-001"
+                                     },
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "concentration_threshold_variance",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "ratio",
+                                         "expected_value":  0.1,
+                                         "dimension_id":  "SALON-001"
+                                     }
+                                 ],
+                     "data_quality_issues":  [
+
+                                             ],
+                     "recommendations":  [
+
+                                         ],
+                     "record_states":  [
+
+                                       ],
+                     "period_states":  [
+
+                                       ],
+                     "forbidden_results":  [
+
+                                           ]
+                 },
+    "tolerances":  {
+                       "money":  0.01,
+                       "ratio":  0.0001,
+                       "integer":  0
+                   },
+    "notes":  [
+
+              ]
+}

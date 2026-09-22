@@ -1,0 +1,522 @@
+{
+    "schema_version":  "1.0",
+    "source_specification":  "docs/CONTROL_DATA_SPEC.md",
+    "financial_logic":  "docs/FINANCIAL_LOGIC.md",
+    "synthetic_data_only":  true,
+    "total_cases":  45,
+    "cases":  [
+                  {
+                      "test_id":  "CD-001",
+                      "file":  "CD-001.json",
+                      "name":  "Базовый прибыльный салон",
+                      "test_types":  [
+                                         "financial_calculation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "11"
+                  },
+                  {
+                      "test_id":  "CD-002",
+                      "file":  "CD-002.json",
+                      "name":  "Отрицательная операционная прибыль",
+                      "test_types":  [
+                                         "financial_calculation",
+                                         "edge_case"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "12"
+                  },
+                  {
+                      "test_id":  "CD-003",
+                      "file":  "CD-003.json",
+                      "name":  "Скидка и влияние на маржинальную прибыль",
+                      "test_types":  [
+                                         "financial_calculation",
+                                         "recommendation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "13"
+                  },
+                  {
+                      "test_id":  "CD-004",
+                      "file":  "CD-004.json",
+                      "name":  "Частичный возврат текущего периода",
+                      "test_types":  [
+                                         "financial_calculation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "14"
+                  },
+                  {
+                      "test_id":  "CD-005",
+                      "file":  "CD-005.json",
+                      "name":  "Возврат операции прошлого периода",
+                      "test_types":  [
+                                         "financial_calculation",
+                                         "period_control"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "15"
+                  },
+                  {
+                      "test_id":  "CD-006",
+                      "file":  "CD-006.json",
+                      "name":  "Аванс и последующее погашение",
+                      "test_types":  [
+                                         "financial_calculation",
+                                         "cash"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "16"
+                  },
+                  {
+                      "test_id":  "CD-007",
+                      "file":  "CD-007.json",
+                      "name":  "Фактические материалы и перерасход",
+                      "test_types":  [
+                                         "financial_calculation",
+                                         "materials",
+                                         "recommendation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "17"
+                  },
+                  {
+                      "test_id":  "CD-008",
+                      "file":  "CD-008.json",
+                      "name":  "Только нормативные материалы",
+                      "test_types":  [
+                                         "financial_calculation",
+                                         "materials"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "18"
+                  },
+                  {
+                      "test_id":  "CD-009",
+                      "file":  "CD-009.json",
+                      "name":  "Полное отсутствие материалов",
+                      "test_types":  [
+                                         "data_quality",
+                                         "materials"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "19"
+                  },
+                  {
+                      "test_id":  "CD-010",
+                      "file":  "CD-010.json",
+                      "name":  "Процент от фактической суммы",
+                      "test_types":  [
+                                         "compensation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "20"
+                  },
+                  {
+                      "test_id":  "CD-011",
+                      "file":  "CD-011.json",
+                      "name":  "Процент от прайса",
+                      "test_types":  [
+                                         "compensation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "21"
+                  },
+                  {
+                      "test_id":  "CD-012",
+                      "file":  "CD-012.json",
+                      "name":  "Процент после вычета материалов",
+                      "test_types":  [
+                                         "compensation",
+                                         "materials"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "22"
+                  },
+                  {
+                      "test_id":  "CD-013",
+                      "file":  "CD-013.json",
+                      "name":  "Фиксированная ставка за услугу",
+                      "test_types":  [
+                                         "compensation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "23"
+                  },
+                  {
+                      "test_id":  "CD-014",
+                      "file":  "CD-014.json",
+                      "name":  "Фиксированная ставка за смену",
+                      "test_types":  [
+                                         "compensation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "24"
+                  },
+                  {
+                      "test_id":  "CD-015",
+                      "file":  "CD-015.json",
+                      "name":  "Ежемесячный оклад",
+                      "test_types":  [
+                                         "compensation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "25"
+                  },
+                  {
+                      "test_id":  "CD-016",
+                      "file":  "CD-016.json",
+                      "name":  "Смешанная схема",
+                      "test_types":  [
+                                         "compensation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "26"
+                  },
+                  {
+                      "test_id":  "CD-017",
+                      "file":  "CD-017.json",
+                      "name":  "Ручная итоговая выплата",
+                      "test_types":  [
+                                         "compensation",
+                                         "adjustment_control"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "27"
+                  },
+                  {
+                      "test_id":  "CD-018",
+                      "file":  "CD-018.json",
+                      "name":  "Настраиваемая ставка налога",
+                      "test_types":  [
+                                         "tax_and_fees"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "28"
+                  },
+                  {
+                      "test_id":  "CD-019",
+                      "file":  "CD-019.json",
+                      "name":  "Фактический налог периода",
+                      "test_types":  [
+                                         "tax_and_fees"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "29"
+                  },
+                  {
+                      "test_id":  "CD-020",
+                      "file":  "CD-020.json",
+                      "name":  "Смешанная оплата",
+                      "test_types":  [
+                                         "tax_and_fees"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "30"
+                  },
+                  {
+                      "test_id":  "CD-021",
+                      "file":  "CD-021.json",
+                      "name":  "Простая аренда рабочего места",
+                      "test_types":  [
+                                         "financial_calculation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "31"
+                  },
+                  {
+                      "test_id":  "CD-022",
+                      "file":  "CD-022.json",
+                      "name":  "Отрицательная маржинальная прибыль услуги",
+                      "test_types":  [
+                                         "financial_calculation",
+                                         "recommendation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "32"
+                  },
+                  {
+                      "test_id":  "CD-023",
+                      "file":  "CD-023.json",
+                      "name":  "Точка безубыточности",
+                      "test_types":  [
+                                         "financial_calculation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "33"
+                  },
+                  {
+                      "test_id":  "CD-024",
+                      "file":  "CD-024.json",
+                      "name":  "Нулевой знаменатель",
+                      "test_types":  [
+                                         "edge_case"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "34"
+                  },
+                  {
+                      "test_id":  "CD-025",
+                      "file":  "CD-025.json",
+                      "name":  "Загрузка при наличии смен",
+                      "test_types":  [
+                                         "financial_calculation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "35"
+                  },
+                  {
+                      "test_id":  "CD-026",
+                      "file":  "CD-026.json",
+                      "name":  "Отсутствие доступных часов",
+                      "test_types":  [
+                                         "data_quality"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "36"
+                  },
+                  {
+                      "test_id":  "CD-027",
+                      "file":  "CD-027.json",
+                      "name":  "План-факт",
+                      "test_types":  [
+                                         "financial_calculation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "37"
+                  },
+                  {
+                      "test_id":  "CD-028",
+                      "file":  "CD-028.json",
+                      "name":  "Прогноз неполного периода",
+                      "test_types":  [
+                                         "financial_calculation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "38"
+                  },
+                  {
+                      "test_id":  "CD-029",
+                      "file":  "CD-029.json",
+                      "name":  "Полный денежный блок",
+                      "test_types":  [
+                                         "cash"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "39"
+                  },
+                  {
+                      "test_id":  "CD-030",
+                      "file":  "CD-030.json",
+                      "name":  "Неполный денежный блок",
+                      "test_types":  [
+                                         "cash",
+                                         "data_quality"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "40"
+                  },
+                  {
+                      "test_id":  "CD-031",
+                      "file":  "CD-031.json",
+                      "name":  "Сценарий изменения цены",
+                      "test_types":  [
+                                         "scenario"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "41"
+                  },
+                  {
+                      "test_id":  "CD-032",
+                      "file":  "CD-032.json",
+                      "name":  "Сценарий материалов",
+                      "test_types":  [
+                                         "scenario"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "42"
+                  },
+                  {
+                      "test_id":  "CD-033",
+                      "file":  "CD-033.json",
+                      "name":  "Сценарий схемы оплаты",
+                      "test_types":  [
+                                         "scenario"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "43"
+                  },
+                  {
+                      "test_id":  "CD-034",
+                      "file":  "CD-034.json",
+                      "name":  "Блокировка рекомендации ошибкой данных",
+                      "test_types":  [
+                                         "data_quality",
+                                         "recommendation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "44"
+                  },
+                  {
+                      "test_id":  "CD-035",
+                      "file":  "CD-035.json",
+                      "name":  "Возможные дубли",
+                      "test_types":  [
+                                         "import_control",
+                                         "data_quality"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "45"
+                  },
+                  {
+                      "test_id":  "CD-036",
+                      "file":  "CD-036.json",
+                      "name":  "Закрытие и переоткрытие периода",
+                      "test_types":  [
+                                         "period_control"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "46"
+                  },
+                  {
+                      "test_id":  "CD-037",
+                      "file":  "CD-037.json",
+                      "name":  "Ручная корректировка и сторно",
+                      "test_types":  [
+                                         "adjustment_control"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "47"
+                  },
+                  {
+                      "test_id":  "CD-038",
+                      "file":  "CD-038.json",
+                      "name":  "Выручка выросла, прибыль снизилась",
+                      "test_types":  [
+                                         "financial_calculation",
+                                         "recommendation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "48"
+                  },
+                  {
+                      "test_id":  "CD-039",
+                      "file":  "CD-039.json",
+                      "name":  "Прибыль ниже плана",
+                      "test_types":  [
+                                         "financial_calculation",
+                                         "recommendation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "49"
+                  },
+                  {
+                      "test_id":  "CD-040",
+                      "file":  "CD-040.json",
+                      "name":  "Низкая прибыль услуги за час",
+                      "test_types":  [
+                                         "recommendation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "50"
+                  },
+                  {
+                      "test_id":  "CD-041",
+                      "file":  "CD-041.json",
+                      "name":  "Высокая выручка и низкий прямой результат мастера",
+                      "test_types":  [
+                                         "recommendation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "51"
+                  },
+                  {
+                      "test_id":  "CD-042",
+                      "file":  "CD-042.json",
+                      "name":  "Недозагрузка мастера",
+                      "test_types":  [
+                                         "recommendation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "52"
+                  },
+                  {
+                      "test_id":  "CD-043",
+                      "file":  "CD-043.json",
+                      "name":  "Высокая концентрация результата",
+                      "test_types":  [
+                                         "recommendation"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "53"
+                  },
+                  {
+                      "test_id":  "CD-044",
+                      "file":  "CD-044.json",
+                      "name":  "Отсутствующий пользовательский порог",
+                      "test_types":  [
+                                         "recommendation",
+                                         "data_quality"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  false,
+                      "spec_section":  "54"
+                  },
+                  {
+                      "test_id":  "CD-045",
+                      "file":  "CD-045.json",
+                      "name":  "Ограничение главного экрана тремя действиями",
+                      "test_types":  [
+                                         "recommendation",
+                                         "data_quality"
+                                     ],
+                      "status":  "ready",
+                      "critical_before_pilot":  true,
+                      "spec_section":  "55"
+                  }
+              ]
+}

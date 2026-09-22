@@ -1,0 +1,109 @@
+﻿{
+    "schema_version":  "1.0",
+    "test_id":  "CD-014",
+    "name":  "Фиксированная ставка за смену",
+    "description":  "Вымышленный контрольный набор: Фиксированная ставка за смену",
+    "test_types":  [
+                       "compensation"
+                   ],
+    "spec_reference":  {
+                           "document":  "docs/CONTROL_DATA_SPEC.md",
+                           "section":  "24"
+                       },
+    "financial_logic_reference":  [
+                                      "docs/FINANCIAL_LOGIC.md"
+                                  ],
+    "status":  "ready",
+    "synthetic_data":  true,
+    "periods":  [
+                    {
+                        "period_id":  "PER-2026-01",
+                        "date_from":  "2026-01-01",
+                        "date_to":  "2026-01-31",
+                        "period_status":  "open",
+                        "completed_working_days":  null,
+                        "total_working_days":  null
+                    }
+                ],
+    "settings":  {
+
+                 },
+    "tables":  {
+                   "services":  [
+
+                                ],
+                   "masters":  [
+
+                               ],
+                   "compensation_schemes":  [
+
+                                            ],
+                   "operations":  [
+
+                                  ],
+                   "expenses":  [
+
+                                ],
+                   "shifts":  [
+
+                              ],
+                   "materials":  [
+
+                                 ],
+                   "refunds":  [
+
+                               ],
+                   "obligations":  [
+
+                                   ],
+                   "plans":  [
+
+                             ],
+                   "adjustments":  [
+
+                                   ],
+                   "scenarios":  [
+
+                                 ],
+                   "period_events":  [
+
+                                     ]
+               },
+    "expected":  {
+                     "metrics":  [
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "shift_pay",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "money",
+                                         "expected_value":  1000,
+                                         "dimension_id":  "SALON-001"
+                                     }
+                                 ],
+                     "data_quality_issues":  [
+
+                                             ],
+                     "recommendations":  [
+
+                                         ],
+                     "record_states":  [
+
+                                       ],
+                     "period_states":  [
+
+                                       ],
+                     "forbidden_results":  [
+
+                                           ]
+                 },
+    "tolerances":  {
+                       "money":  0.01,
+                       "ratio":  0.0001,
+                       "integer":  0
+                   },
+    "notes":  [
+
+              ]
+}

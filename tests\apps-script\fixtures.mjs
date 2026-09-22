@@ -1,0 +1,11 @@
+import { MockSpreadsheet } from './mock-spreadsheet.mjs';
+export const emptyValidWorkbook = () => new MockSpreadsheet();
+export const workbookAfterBootstrap = () => new MockSpreadsheet();
+export const lookupAligned = () => new MockSpreadsheet();
+export const dataValidationsAligned = () => new MockSpreadsheet();
+export const inputSheetsAligned = () => new MockSpreadsheet();
+export const periodsEmpty = () => new MockSpreadsheet();
+export const periodsAligned = () => new MockSpreadsheet();
+export const structuralConflict = () => ({kind:'structural_conflict'});
+export const foreignProtection = () => ({kind:'foreign_protection'});
+export const duplicatePeriod = () => ({kind:'duplicate_period'});

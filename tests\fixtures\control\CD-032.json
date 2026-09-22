@@ -1,0 +1,139 @@
+﻿{
+    "schema_version":  "1.0",
+    "test_id":  "CD-032",
+    "name":  "Сценарий материалов",
+    "description":  "Вымышленный контрольный набор: Сценарий материалов",
+    "test_types":  [
+                       "scenario"
+                   ],
+    "spec_reference":  {
+                           "document":  "docs/CONTROL_DATA_SPEC.md",
+                           "section":  "42"
+                       },
+    "financial_logic_reference":  [
+                                      "docs/FINANCIAL_LOGIC.md"
+                                  ],
+    "status":  "ready",
+    "synthetic_data":  true,
+    "periods":  [
+                    {
+                        "period_id":  "PER-2026-01",
+                        "date_from":  "2026-01-01",
+                        "date_to":  "2026-01-31",
+                        "period_status":  "open",
+                        "completed_working_days":  null,
+                        "total_working_days":  null
+                    }
+                ],
+    "settings":  {
+
+                 },
+    "tables":  {
+                   "services":  [
+
+                                ],
+                   "masters":  [
+
+                               ],
+                   "compensation_schemes":  [
+
+                                            ],
+                   "operations":  [
+
+                                  ],
+                   "expenses":  [
+
+                                ],
+                   "shifts":  [
+
+                              ],
+                   "materials":  [
+
+                                 ],
+                   "refunds":  [
+
+                               ],
+                   "obligations":  [
+
+                                   ],
+                   "plans":  [
+
+                             ],
+                   "adjustments":  [
+
+                                   ],
+                   "scenarios":  [
+
+                                 ],
+                   "period_events":  [
+
+                                     ]
+               },
+    "expected":  {
+                     "metrics":  [
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "base_material_cost",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "money",
+                                         "expected_value":  15000,
+                                         "dimension_id":  "SALON-001"
+                                     },
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "scenario_material_cost",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "money",
+                                         "expected_value":  12000,
+                                         "dimension_id":  "SALON-001"
+                                     },
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "material_cost_change",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "money",
+                                         "expected_value":  -3000,
+                                         "dimension_id":  "SALON-001"
+                                     },
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "contribution_profit_change",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "money",
+                                         "expected_value":  3000,
+                                         "dimension_id":  "SALON-001"
+                                     }
+                                 ],
+                     "data_quality_issues":  [
+
+                                             ],
+                     "recommendations":  [
+
+                                         ],
+                     "record_states":  [
+
+                                       ],
+                     "period_states":  [
+
+                                       ],
+                     "forbidden_results":  [
+
+                                           ]
+                 },
+    "tolerances":  {
+                       "money":  0.01,
+                       "ratio":  0.0001,
+                       "integer":  0
+                   },
+    "notes":  [
+
+              ]
+}

@@ -1,0 +1,10 @@
+import { spawnSync } from 'node:child_process';
+const suites=['workbook','lookups','data-validations','input-sheets','periods','dev-runner','financial-core-revenue','financial-core-formula-candidate','period-completeness-migration','financial-core-formula-installer','demo-owner-desk-recovery'], started=Date.now();
+suites.push('owner-desk-live');
+suites.push('demo-costs');
+suites.push('owner-desk-polish');
+suites.push('demo-analytics');
+suites.push('demo-mvp-acceptance');
+const results=suites.map((suite)=>{const run=spawnSync(process.execPath,['tests/apps-script/run-focused.mjs',suite],{encoding:'utf8'});return {suite,valid:run.status===0,output:run.stdout.trim()};});
+const summary={valid:results.every((x)=>x.valid),suiteCount:results.length,passed:results.filter((x)=>x.valid).length,failed:results.filter((x)=>!x.valid).length,warnings:0,durationMs:Date.now()-started,suites:results};
+console.log(JSON.stringify(summary,null,2)); if(!summary.valid)process.exitCode=1;

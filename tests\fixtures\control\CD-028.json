@@ -1,0 +1,119 @@
+﻿{
+    "schema_version":  "1.0",
+    "test_id":  "CD-028",
+    "name":  "Прогноз неполного периода",
+    "description":  "Вымышленный контрольный набор: Прогноз неполного периода",
+    "test_types":  [
+                       "financial_calculation"
+                   ],
+    "spec_reference":  {
+                           "document":  "docs/CONTROL_DATA_SPEC.md",
+                           "section":  "38"
+                       },
+    "financial_logic_reference":  [
+                                      "docs/FINANCIAL_LOGIC.md"
+                                  ],
+    "status":  "ready",
+    "synthetic_data":  true,
+    "periods":  [
+                    {
+                        "period_id":  "PER-2026-01",
+                        "date_from":  "2026-01-01",
+                        "date_to":  "2026-01-31",
+                        "period_status":  "open",
+                        "completed_working_days":  null,
+                        "total_working_days":  null
+                    }
+                ],
+    "settings":  {
+
+                 },
+    "tables":  {
+                   "services":  [
+
+                                ],
+                   "masters":  [
+
+                               ],
+                   "compensation_schemes":  [
+
+                                            ],
+                   "operations":  [
+
+                                  ],
+                   "expenses":  [
+
+                                ],
+                   "shifts":  [
+
+                              ],
+                   "materials":  [
+
+                                 ],
+                   "refunds":  [
+
+                               ],
+                   "obligations":  [
+
+                                   ],
+                   "plans":  [
+
+                             ],
+                   "adjustments":  [
+
+                                   ],
+                   "scenarios":  [
+
+                                 ],
+                   "period_events":  [
+
+                                     ]
+               },
+    "expected":  {
+                     "metrics":  [
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "average_operating_profit_per_completed_day",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "money",
+                                         "expected_value":  2000,
+                                         "dimension_id":  "SALON-001"
+                                     },
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "forecast_operating_profit",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "money",
+                                         "expected_value":  40000,
+                                         "dimension_id":  "SALON-001"
+                                     }
+                                 ],
+                     "data_quality_issues":  [
+
+                                             ],
+                     "recommendations":  [
+
+                                         ],
+                     "record_states":  [
+
+                                       ],
+                     "period_states":  [
+
+                                       ],
+                     "forbidden_results":  [
+
+                                           ]
+                 },
+    "tolerances":  {
+                       "money":  0.01,
+                       "ratio":  0.0001,
+                       "integer":  0
+                   },
+    "notes":  [
+
+              ]
+}

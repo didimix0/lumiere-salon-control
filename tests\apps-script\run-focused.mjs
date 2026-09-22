@@ -1,0 +1,23 @@
+import { runCoreRuntimeSuite } from './suites/core-runtime.test.mjs';
+import { runPeriodsRuntimeSuite } from './suites/periods-runtime.test.mjs';
+import { runFinancialCoreRevenueSuite } from './suites/financial-core-revenue.test.mjs';
+import { runFinancialCoreFormulaCandidateSuite } from './suites/financial-core-formula-candidate.test.mjs';
+import { runPeriodCompletenessMigrationSuite } from './suites/period-completeness-migration.test.mjs';
+import { runFinancialCoreFormulaInstallerSuite } from './suites/financial-core-formula-installer.test.mjs';
+import { runDemoOwnerDeskRecoverySuite } from './suites/demo-owner-desk-recovery.test.mjs';
+import { runOwnerDeskLiveSuite } from './suites/owner-desk-live.test.mjs';
+import { runDemoCostsSuite } from './suites/demo-costs.test.mjs';
+import { runOwnerDeskPolishSuite } from './suites/owner-desk-polish.test.mjs';
+import { runDemoAnalyticsSuite } from './suites/demo-analytics.test.mjs';
+import { runDemoMvpAcceptanceSuite } from './suites/demo-mvp-acceptance.test.mjs';
+const suites = ['workbook','lookups','data-validations','input-sheets','periods','dev-runner','financial-core-revenue','financial-core-formula-candidate','period-completeness-migration','financial-core-formula-installer','demo-owner-desk-recovery'];
+const requested = process.argv[2];
+suites.push('owner-desk-live');
+suites.push('demo-costs');
+suites.push('owner-desk-polish');
+suites.push('demo-analytics');
+suites.push('demo-mvp-acceptance');
+if (!suites.includes(requested)) { console.error(JSON.stringify({valid:false,error:'UNKNOWN_SUITE',allowed:suites})); process.exit(1); }
+const core = requested === 'demo-mvp-acceptance' ? runDemoMvpAcceptanceSuite() : requested === 'demo-analytics' ? runDemoAnalyticsSuite() : requested === 'owner-desk-polish' ? runOwnerDeskPolishSuite() : requested === 'demo-costs' ? runDemoCostsSuite() : requested === 'owner-desk-live' ? runOwnerDeskLiveSuite() : requested === 'periods' ? runPeriodsRuntimeSuite() : requested === 'financial-core-revenue' ? runFinancialCoreRevenueSuite() : requested === 'financial-core-formula-candidate' ? runFinancialCoreFormulaCandidateSuite() : requested === 'period-completeness-migration' ? runPeriodCompletenessMigrationSuite() : requested === 'financial-core-formula-installer' ? runFinancialCoreFormulaInstallerSuite() : requested === 'demo-owner-desk-recovery' ? runDemoOwnerDeskRecoverySuite() : runCoreRuntimeSuite();
+const result = {valid:core.valid,suite:requested,passed:core.tests.filter((x)=>x.pass).length,failed:core.tests.filter((x)=>!x.pass).length,warnings:0,tests:core.tests};
+console.log(JSON.stringify(result,null,2)); if (!result.valid) process.exitCode=1;

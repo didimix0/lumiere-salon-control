@@ -1,0 +1,169 @@
+﻿{
+    "schema_version":  "1.0",
+    "test_id":  "CD-004",
+    "name":  "Частичный возврат текущего периода",
+    "description":  "Вымышленный контрольный набор: Частичный возврат текущего периода",
+    "test_types":  [
+                       "financial_calculation"
+                   ],
+    "spec_reference":  {
+                           "document":  "docs/CONTROL_DATA_SPEC.md",
+                           "section":  "14"
+                       },
+    "financial_logic_reference":  [
+                                      "docs/FINANCIAL_LOGIC.md"
+                                  ],
+    "status":  "ready",
+    "synthetic_data":  true,
+    "periods":  [
+                    {
+                        "period_id":  "PER-2026-01",
+                        "date_from":  "2026-01-01",
+                        "date_to":  "2026-01-31",
+                        "period_status":  "open",
+                        "completed_working_days":  null,
+                        "total_working_days":  null
+                    }
+                ],
+    "settings":  {
+
+                 },
+    "tables":  {
+                   "services":  [
+
+                                ],
+                   "masters":  [
+
+                               ],
+                   "compensation_schemes":  [
+
+                                            ],
+                   "operations":  [
+
+                                  ],
+                   "expenses":  [
+
+                                ],
+                   "shifts":  [
+
+                              ],
+                   "materials":  [
+
+                                 ],
+                   "refunds":  [
+
+                               ],
+                   "obligations":  [
+
+                                   ],
+                   "plans":  [
+
+                             ],
+                   "adjustments":  [
+
+                                   ],
+                   "scenarios":  [
+
+                                 ],
+                   "period_events":  [
+
+                                     ]
+               },
+    "expected":  {
+                     "metrics":  [
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "net_service_revenue",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "money",
+                                         "expected_value":  600,
+                                         "dimension_id":  "SALON-001"
+                                     },
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "refund_amount",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "money",
+                                         "expected_value":  400,
+                                         "dimension_id":  "SALON-001"
+                                     },
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "variable_master_pay",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "money",
+                                         "expected_value":  180,
+                                         "dimension_id":  "SALON-001"
+                                     },
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "service_tax_expense",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "money",
+                                         "expected_value":  36,
+                                         "dimension_id":  "SALON-001"
+                                     },
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "material_cost",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "money",
+                                         "expected_value":  100,
+                                         "dimension_id":  "SALON-001"
+                                     },
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "contribution_profit",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "money",
+                                         "expected_value":  284,
+                                         "dimension_id":  "SALON-001"
+                                     },
+                                     {
+                                         "quality_status":  "actual",
+                                         "period_id":  "PER-2026-01",
+                                         "metric_code":  "cash_outflow_refunds",
+                                         "comparison":  "exact",
+                                         "dimension_type":  "salon",
+                                         "value_unit":  "money",
+                                         "expected_value":  400,
+                                         "dimension_id":  "SALON-001"
+                                     }
+                                 ],
+                     "data_quality_issues":  [
+
+                                             ],
+                     "recommendations":  [
+
+                                         ],
+                     "record_states":  [
+
+                                       ],
+                     "period_states":  [
+
+                                       ],
+                     "forbidden_results":  [
+
+                                           ]
+                 },
+    "tolerances":  {
+                       "money":  0.01,
+                       "ratio":  0.0001,
+                       "integer":  0
+                   },
+    "notes":  [
+
+              ]
+}
