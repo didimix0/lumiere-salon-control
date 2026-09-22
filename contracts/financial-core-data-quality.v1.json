@@ -1,0 +1,13 @@
+{
+  "contract": "financial-core-data-quality",
+  "version": "1.0.0",
+  "status": "accepted_iteration_4_contract",
+  "periodInputCompleteness": {
+    "incomplete_empty_sources": {"metricStatus":"preliminary_incomplete","metricValue":"null","codes":["PERIOD_INPUT_INCOMPLETE","PERIOD_INPUT_EMPTY_UNCONFIRMED"],"meaning":"no confirmed zero"},
+    "incomplete_with_sources": {"metricStatus":"preliminary_incomplete","metricValue":"calculated_from_current_inputs","codes":["PERIOD_INPUT_INCOMPLETE"],"meaning":"partial result is allowed but never final"},
+    "complete_empty_sources": {"metricStatus":"complete","metricValue":"zero","codes":[],"meaning":"confirmed zero activity"},
+    "complete_with_sources": {"metricStatus":"complete","metricValue":"calculated_from_confirmed_inputs","codes":[],"meaning":"Financial Core source set is confirmed"},
+    "closed": {"metricStatus":"closed_actual","requires":["input_completeness_status=complete","no_unresolved_data_quality_blockers","no_unconfirmed_import_or_manual_input"],"codes":["PERIOD_CLOSE_INPUT_COMPLETENESS_REQUIRED","PERIOD_CLOSE_UNCONFIRMED_INPUTS"]}
+  },
+  "prohibitions": ["derive completeness from row absence", "return a zero metric for incomplete empty sources", "close a period with input_completeness_status other than complete"]
+}

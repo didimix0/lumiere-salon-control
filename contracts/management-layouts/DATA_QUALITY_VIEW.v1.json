@@ -1,0 +1,36 @@
+{
+  "contractVersion": "1.0",
+  "status": "normative_machine_readable_layout_contract",
+  "schemaKey": "DATA_QUALITY_VIEW",
+  "sheetName": "02_Качество данных",
+  "headerRow": null,
+  "representation": "layout_only",
+  "source": {
+    "document": "docs/MANAGEMENT_LAYOUTS_PHYSICAL_CONTRACT.md",
+    "version": "1.0",
+    "section": "DATA_QUALITY_VIEW — 02_Качество данных"
+  },
+  "columns": [],
+  "layout": [
+    {"key":"PAGE_HEADER","entryType":"page_header","title":"Контроль качества данных","purpose":"Обозначает экран контроля качества данных, используемых в расчётах и управленческой аналитике.","startRow":1,"startColumn":1,"rowSpan":1,"columnSpan":12,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":null,"visibilityCondition":"always","notes":"Заголовок не содержит показателей, расчётов или фактических данных."},
+    {"key":"PAGE_INSTRUCTION","entryType":"instruction","title":"Как читать проблемы качества","purpose":"Объясняет различие между ошибками, блокирующими расчёт, и предупреждениями, допускающими расчёт с ограничениями.","startRow":2,"startColumn":1,"rowSpan":1,"columnSpan":12,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":null,"visibilityCondition":"always","notes":"Инструкция задаёт правила интерпретации проблем качества, а не финансовые выводы."},
+    {"key":"PERIOD_AND_SCOPE_SELECTOR","entryType":"selector","title":"Период и область проверки","purpose":"Резервирует выбор периода, области проверки и набора данных, к которому относится диагностика.","startRow":3,"startColumn":1,"rowSpan":2,"columnSpan":6,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":"SYS_PERIODS","visibilityCondition":"always","notes":"Фактические значения селектора в контракт не включены."},
+    {"key":"QUALITY_SUMMARY","entryType":"status_panel","title":"Сводка качества","purpose":"Резервирует сводный статус полноты, корректности и готовности данных к расчётам.","startRow":3,"startColumn":7,"rowSpan":2,"columnSpan":6,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":"SYS_DATA_QUALITY","visibilityCondition":"always","notes":"Статус качества данных не является финансовым результатом; хороший финансовый результат не компенсирует плохое качество данных."},
+    {"key":"BLOCKING_ISSUES","entryType":"warning_panel","title":"Блокирующие проблемы","purpose":"Резервирует проблемы, из-за которых расчёт нельзя считать достоверным, период нельзя закрыть или показатель нельзя публиковать владельцу.","startRow":6,"startColumn":1,"rowSpan":7,"columnSpan":6,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":"SYS_DATA_QUALITY","visibilityCondition":"always","notes":"Блокирующие проблемы должны быть устранены до подтверждения результата."},
+    {"key":"NON_BLOCKING_WARNINGS","entryType":"warning_panel","title":"Неблокирующие предупреждения","purpose":"Резервирует проблемы, которые не блокируют расчёт полностью, но снижают уверенность и требуют явного ограничения интерпретации.","startRow":6,"startColumn":7,"rowSpan":7,"columnSpan":6,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":"SYS_DATA_QUALITY","visibilityCondition":"always","notes":"Предупреждение не является подтверждённой финансовой потерей."},
+    {"key":"DUPLICATE_REVIEW","entryType":"table_placeholder","title":"Проверка возможных дублей","purpose":"Резервирует ручную проверку возможных дублей импортированных строк до подтверждённого commit.","startRow":14,"startColumn":1,"rowSpan":7,"columnSpan":6,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":"SYS_STAGING","visibilityCondition":"always","notes":"Staging не является канонической таблицей; возможные дубли не удаляются и не объединяются автоматически; кандидат в дубль не является доказанным дублем; решение принимается до подтверждённого commit."},
+    {"key":"MAPPING_AND_REFERENCE_ISSUES","entryType":"table_placeholder","title":"Проблемы сопоставления и справочников","purpose":"Резервирует проблемы сопоставления исходных колонок, неизвестных услуг, мастеров, статусов и ссылочной целостности.","startRow":14,"startColumn":7,"rowSpan":7,"columnSpan":6,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":"SYS_DATA_QUALITY","visibilityCondition":"always","notes":"Исправления сопоставления и справочников автоматически не создаются."},
+    {"key":"UNRESOLVED_ADJUSTMENTS","entryType":"table_placeholder","title":"Неподтверждённые корректировки","purpose":"Резервирует корректировки, которые ещё не подтверждены, не применены и требуют основания или проверки.","startRow":22,"startColumn":1,"rowSpan":6,"columnSpan":6,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":"SYS_ADJUSTMENTS","visibilityCondition":"always","notes":"Корректировка хранится отдельно от исходного факта; исходная запись не заменяется молча; незавершённая корректировка не считается подтверждённым финансовым изменением."},
+    {"key":"QUALITY_ACTION_QUEUE","entryType":"action_panel","title":"Очередь действий по качеству","purpose":"Резервирует упорядоченную очередь действий для устранения проблем качества данных.","startRow":22,"startColumn":7,"rowSpan":6,"columnSpan":6,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":"SYS_DATA_QUALITY","visibilityCondition":"always","notes":"Действие должно быть связано с конкретной проблемой, уровнем критичности, затронутой сущностью и способом проверки исправления; сами действия не формируются на этом этапе."}
+  ],
+  "notes": [
+    "DATA_QUALITY_VIEW является layout-only схемой.",
+    "Статус качества данных не является финансовым результатом.",
+    "Блокирующие ошибки отделены от неблокирующих предупреждений.",
+    "Staging не является каноническим источником финансовых фактов.",
+    "Возможные дубли не удаляются и не объединяются автоматически.",
+    "Корректировки хранятся отдельно от исходных фактов.",
+    "Формулы, реальные значения и runtime-логика отсутствуют.",
+    "Все 10 блоков являются статическими placeholders текущей версии."
+  ]
+}

@@ -1,0 +1,882 @@
+{
+  "contractVersion": "1.1",
+  "status": "normative_machine_readable_contract",
+  "generatedAt": "2026-07-13T15:59:59.3231699Z",
+  "sources": [
+    {
+      "document": "docs/GOOGLE_SHEETS_SPEC.md",
+      "version": "1.3"
+    },
+    {
+      "document": "docs/SYSTEM_SHEETS_PHYSICAL_CONTRACT.md",
+      "version": "1.0"
+    },
+    {
+      "document": "docs/UNIVERSAL_IMPORT_SPEC.md",
+      "version": "1.1"
+    },
+    {
+      "document": "src/apps-script/SchemaDefinitions.gs",
+      "version": "current"
+    }
+  ],
+  "lookupCount": 38,
+  "lookups": [
+    {
+      "position": 1,
+      "key": "operation_status",
+      "label": "operation status",
+      "purpose": "Группа проверки данных operation_status.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "operation_status",
+        "label": "operation status",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы operation_status.",
+        "width": 180
+      }
+    },
+    {
+      "position": 2,
+      "key": "cooperation_type",
+      "label": "cooperation type",
+      "purpose": "Группа проверки данных cooperation_type.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "cooperation_type",
+        "label": "cooperation type",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы cooperation_type.",
+        "width": 180
+      }
+    },
+    {
+      "position": 3,
+      "key": "scheme_type",
+      "label": "scheme type",
+      "purpose": "Группа проверки данных scheme_type.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "scheme_type",
+        "label": "scheme type",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы scheme_type.",
+        "width": 180
+      }
+    },
+    {
+      "position": 4,
+      "key": "commission_base_type",
+      "label": "commission base type",
+      "purpose": "Группа проверки данных commission_base_type.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "commission_base_type",
+        "label": "commission base type",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы commission_base_type.",
+        "width": 180
+      }
+    },
+    {
+      "position": 5,
+      "key": "shift_status",
+      "label": "shift status",
+      "purpose": "Группа проверки данных shift_status.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "shift_status",
+        "label": "shift status",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы shift_status.",
+        "width": 180
+      }
+    },
+    {
+      "position": 6,
+      "key": "expense_nature",
+      "label": "expense nature",
+      "purpose": "Группа проверки данных expense_nature.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "expense_nature",
+        "label": "expense nature",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы expense_nature.",
+        "width": 180
+      }
+    },
+    {
+      "position": 7,
+      "key": "payment_method",
+      "label": "payment method",
+      "purpose": "Группа проверки данных payment_method.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "payment_method",
+        "label": "payment method",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы payment_method.",
+        "width": 180
+      }
+    },
+    {
+      "position": 8,
+      "key": "data_quality_status",
+      "label": "data quality status",
+      "purpose": "Группа проверки данных data_quality_status.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "data_quality_status",
+        "label": "data quality status",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы data_quality_status.",
+        "width": 180
+      }
+    },
+    {
+      "position": 9,
+      "key": "severity",
+      "label": "severity",
+      "purpose": "Группа проверки данных severity.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "severity",
+        "label": "severity",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы severity.",
+        "width": 180
+      }
+    },
+    {
+      "position": 10,
+      "key": "recommendation_status",
+      "label": "recommendation status",
+      "purpose": "Группа проверки данных recommendation_status.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "recommendation_status",
+        "label": "recommendation status",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы recommendation_status.",
+        "width": 180
+      }
+    },
+    {
+      "position": 11,
+      "key": "financial_impact_type",
+      "label": "financial impact type",
+      "purpose": "Группа проверки данных financial_impact_type.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "financial_impact_type",
+        "label": "financial impact type",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы financial_impact_type.",
+        "width": 180
+      }
+    },
+    {
+      "position": 12,
+      "key": "confidence_level",
+      "label": "confidence level",
+      "purpose": "Группа проверки данных confidence_level.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "confidence_level",
+        "label": "confidence level",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы confidence_level.",
+        "width": 180
+      }
+    },
+    {
+      "position": 13,
+      "key": "implementation_complexity",
+      "label": "implementation complexity",
+      "purpose": "Группа проверки данных implementation_complexity.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "implementation_complexity",
+        "label": "implementation complexity",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы implementation_complexity.",
+        "width": 180
+      }
+    },
+    {
+      "position": 14,
+      "key": "risk_level",
+      "label": "risk level",
+      "purpose": "Группа проверки данных risk_level.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "risk_level",
+        "label": "risk level",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы risk_level.",
+        "width": 180
+      }
+    },
+    {
+      "position": 15,
+      "key": "period_status",
+      "label": "period status",
+      "purpose": "Группа проверки данных period_status.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "period_status",
+        "label": "period status",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы period_status.",
+        "width": 180
+      }
+    },
+    {
+      "position": 16,
+      "key": "decision_status",
+      "label": "decision status",
+      "purpose": "Группа проверки данных decision_status.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "decision_status",
+        "label": "decision status",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы decision_status.",
+        "width": 180
+      }
+    },
+    {
+      "position": 17,
+      "key": "obligation_type",
+      "label": "obligation type",
+      "purpose": "Группа проверки данных obligation_type.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "obligation_type",
+        "label": "obligation type",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы obligation_type.",
+        "width": 180
+      }
+    },
+    {
+      "position": 18,
+      "key": "obligation_status",
+      "label": "obligation status",
+      "purpose": "Группа проверки данных obligation_status.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "obligation_status",
+        "label": "obligation status",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы obligation_status.",
+        "width": 180
+      }
+    },
+    {
+      "position": 19,
+      "key": "scenario_type",
+      "label": "scenario type",
+      "purpose": "Группа проверки данных scenario_type.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "scenario_type",
+        "label": "scenario type",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы scenario_type.",
+        "width": 180
+      }
+    },
+    {
+      "position": 20,
+      "key": "source_type",
+      "label": "source type",
+      "purpose": "Группа проверки данных source_type.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "source_type",
+        "label": "source type",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы source_type.",
+        "width": 180
+      }
+    },
+    {
+      "position": 21,
+      "key": "duplicate_status",
+      "label": "duplicate status",
+      "purpose": "Группа проверки данных duplicate_status.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "duplicate_status",
+        "label": "duplicate status",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы duplicate_status.",
+        "width": 180
+      }
+    },
+    {
+      "position": 22,
+      "key": "expense_category",
+      "label": "expense category",
+      "purpose": "Группа проверки данных expense_category.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "expense_category",
+        "label": "expense category",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы expense_category.",
+        "width": 180
+      }
+    },
+    {
+      "position": 23,
+      "key": "material_record_type",
+      "label": "material record type",
+      "purpose": "Группа проверки данных material_record_type.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "material_record_type",
+        "label": "material record type",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы material_record_type.",
+        "width": 180
+      }
+    },
+    {
+      "position": 24,
+      "key": "refund_method",
+      "label": "refund method",
+      "purpose": "Группа проверки данных refund_method.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "refund_method",
+        "label": "refund method",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы refund_method.",
+        "width": 180
+      }
+    },
+    {
+      "position": 25,
+      "key": "refund_reason",
+      "label": "refund reason",
+      "purpose": "Группа проверки данных refund_reason.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "refund_reason",
+        "label": "refund reason",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы refund_reason.",
+        "width": 180
+      }
+    },
+    {
+      "position": 26,
+      "key": "master_pay_adjustment_mode",
+      "label": "master pay adjustment mode",
+      "purpose": "Группа проверки данных master_pay_adjustment_mode.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "master_pay_adjustment_mode",
+        "label": "master pay adjustment mode",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы master_pay_adjustment_mode.",
+        "width": 180
+      }
+    },
+    {
+      "position": 27,
+      "key": "tax_adjustment_mode",
+      "label": "tax adjustment mode",
+      "purpose": "Группа проверки данных tax_adjustment_mode.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "tax_adjustment_mode",
+        "label": "tax adjustment mode",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы tax_adjustment_mode.",
+        "width": 180
+      }
+    },
+    {
+      "position": 28,
+      "key": "fee_adjustment_mode",
+      "label": "fee adjustment mode",
+      "purpose": "Группа проверки данных fee_adjustment_mode.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "fee_adjustment_mode",
+        "label": "fee adjustment mode",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы fee_adjustment_mode.",
+        "width": 180
+      }
+    },
+    {
+      "position": 29,
+      "key": "priority",
+      "label": "priority",
+      "purpose": "Группа проверки данных priority.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "priority",
+        "label": "priority",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы priority.",
+        "width": 180
+      }
+    },
+    {
+      "position": 30,
+      "key": "reserve_method",
+      "label": "reserve method",
+      "purpose": "Группа проверки данных reserve_method.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "reserve_method",
+        "label": "reserve method",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы reserve_method.",
+        "width": 180
+      }
+    },
+    {
+      "position": 31,
+      "key": "setting_value_type",
+      "label": "setting value type",
+      "purpose": "Группа проверки данных setting_value_type.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "setting_value_type",
+        "label": "setting value type",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы setting_value_type.",
+        "width": 180
+      }
+    },
+    {
+      "position": 32,
+      "key": "material_cost_mode",
+      "label": "material cost mode",
+      "purpose": "Группа проверки данных material_cost_mode.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "material_cost_mode",
+        "label": "material cost mode",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы material_cost_mode.",
+        "width": 180
+      }
+    },
+    {
+      "position": 33,
+      "key": "dimension_type",
+      "label": "dimension type",
+      "purpose": "Группа проверки данных dimension_type.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "dimension_type",
+        "label": "dimension type",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы dimension_type.",
+        "width": 180
+      }
+    },
+    {
+      "position": 34,
+      "key": "direction_type",
+      "label": "direction type",
+      "purpose": "Группа проверки данных direction_type.",
+      "values": {},
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "ADR 0015 key-only lookup contract",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "direction_type",
+        "label": "direction type",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы direction_type.",
+        "width": 180
+      }
+    },
+    {
+      "position": 35,
+      "key": "staging_commit_status",
+      "label": "staging commit status",
+      "purpose": "Группа проверки данных staging_commit_status.",
+      "values": [
+        "pending",
+        "ready",
+        "committed",
+        "skipped",
+        "failed"
+      ],
+      "valuesStatus": "defined",
+      "valuesSource": "docs/UNIVERSAL_IMPORT_SPEC.md",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "staging_commit_status",
+        "label": "staging commit status",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы staging_commit_status.",
+        "width": 180
+      }
+    },
+    {
+      "position": 36,
+      "key": "import_mapping_record_type",
+      "label": "import mapping record type",
+      "purpose": "Группа проверки данных import_mapping_record_type.",
+      "values": [
+        "profile",
+        "column_mapping",
+        "value_mapping"
+      ],
+      "valuesStatus": "defined",
+      "valuesSource": "docs/UNIVERSAL_IMPORT_SPEC.md",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "import_mapping_record_type",
+        "label": "import mapping record type",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы import_mapping_record_type.",
+        "width": 180
+      }
+    },
+    {
+      "position": 37,
+      "key": "import_transformation_type",
+      "label": "import transformation type",
+      "purpose": "Группа проверки данных import_transformation_type.",
+      "values": [
+        "none",
+        "trim",
+        "date_parse",
+        "number_parse",
+        "boolean_map",
+        "constant",
+        "value_map"
+      ],
+      "valuesStatus": "defined",
+      "valuesSource": "docs/UNIVERSAL_IMPORT_SPEC.md",
+      "usedBy": [],
+      "physicalColumn": {
+        "name": "import_transformation_type",
+        "label": "import transformation type",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы import_transformation_type.",
+        "width": 180
+      }
+    },
+    {
+      "position": 38,
+      "key": "import_status",
+      "label": "import status",
+      "purpose": "Статусы жизненного цикла пакета универсального импорта",
+      "values": [],
+      "valuesStatus": "key_only_contract",
+      "valuesSource": "SYS_IMPORTS physical contract",
+      "usedBy": [
+        "SYS_IMPORTS.import_status"
+      ],
+      "physicalColumn": {
+        "name": "import_status",
+        "label": "import status",
+        "type": "text",
+        "required": false,
+        "editable": false,
+        "system": true,
+        "nullable": true,
+        "enumKey": null,
+        "note": "Значения группы import_status.",
+        "width": 180
+      }
+    }
+  ]
+}

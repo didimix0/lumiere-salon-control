@@ -1,0 +1,37 @@
+{
+  "contractVersion": "1.0",
+  "status": "normative_machine_readable_layout_contract",
+  "schemaKey": "OWNER_DESK",
+  "sheetName": "01_Рабочий стол",
+  "headerRow": null,
+  "representation": "layout_only",
+  "source": {
+    "document": "docs/MANAGEMENT_LAYOUTS_PHYSICAL_CONTRACT.md",
+    "version": "1.0",
+    "section": "OWNER_DESK — 01_Рабочий стол"
+  },
+  "columns": [],
+  "layout": [
+    {"key":"PAGE_HEADER","entryType":"page_header","title":"Рабочий стол владельца","purpose":"Обозначает рабочий стол владельца для обзора финансового результата и приоритетных действий.","startRow":1,"startColumn":1,"rowSpan":1,"columnSpan":12,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":null,"visibilityCondition":"always","notes":"Заголовок фиксирует назначение листа без показателей и расчётов."},
+    {"key":"PAGE_INSTRUCTION","entryType":"instruction","title":"Как читать результат","purpose":"Объясняет различие между закрытым фактом, предварительным текущим результатом и прогнозом при анализе периода.","startRow":2,"startColumn":1,"rowSpan":1,"columnSpan":12,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":null,"visibilityCondition":"always","notes":"Инструкция не подменяет финансовые определения и не содержит фактических значений."},
+    {"key":"PERIOD_SELECTOR","entryType":"selector","title":"Выбор периода","purpose":"Позволяет выбрать период, к которому относится управленческий обзор.","startRow":3,"startColumn":1,"rowSpan":2,"columnSpan":4,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":"SYS_PERIODS","visibilityCondition":"always","notes":"Источник периодов определён системным листом SYS_PERIODS."},
+    {"key":"DATA_STATUS","entryType":"status_panel","title":"Статус данных","purpose":"Показывает качество и полноту данных выбранного периода, необходимых для интерпретации результата.","startRow":3,"startColumn":5,"rowSpan":2,"columnSpan":4,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":"SYS_DATA_QUALITY","visibilityCondition":"always","notes":"Статус качества данных не является финансовым результатом."},
+    {"key":"CASH_MODULE_STATUS","entryType":"status_panel","title":"Статус денежного блока","purpose":"Показывает состояние и доступность денежного блока для выбранного периода.","startRow":3,"startColumn":9,"rowSpan":2,"columnSpan":4,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":null,"visibilityCondition":"cash_module_enabled","notes":"Отображается только при доступности денежного модуля; значений и расчётов нет."},
+    {"key":"ACTUAL_CLOSED_KPIS","entryType":"kpi_group","title":"Закрытый факт","purpose":"Отдельно резервирует показатели закрытого фактического периода для подтверждённого анализа.","startRow":6,"startColumn":1,"rowSpan":4,"columnSpan":4,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":"SYS_CALC","visibilityCondition":"always","notes":"Не смешивается с предварительным текущим результатом или прогнозом."},
+    {"key":"PRELIMINARY_CURRENT_KPIS","entryType":"kpi_group","title":"Предварительный текущий результат","purpose":"Отдельно резервирует предварительные показатели текущего незакрытого периода.","startRow":6,"startColumn":5,"rowSpan":4,"columnSpan":4,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":"SYS_CALC","visibilityCondition":"always","notes":"Предварительные показатели ещё могут измениться и не являются закрытым фактом."},
+    {"key":"FORECAST_KPIS","entryType":"kpi_group","title":"Прогноз","purpose":"Отдельно резервирует прогнозные показатели для оценки ожидаемого результата периода.","startRow":6,"startColumn":9,"rowSpan":4,"columnSpan":4,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":"SYS_CALC","visibilityCondition":"always","notes":"Прогноз не является подтверждённым фактическим результатом."},
+    {"key":"PLAN_FACT_COMPARISON","entryType":"comparison_panel","title":"План-факт","purpose":"Резервирует область для сопоставления плана с соответствующим фактическим или предварительным результатом.","startRow":11,"startColumn":1,"rowSpan":6,"columnSpan":6,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":"PLANS","visibilityCondition":"always","notes":"Числовые значения и формулы сравнения в контракт не включены."},
+    {"key":"OWNER_CASH_LIMIT","entryType":"kpi_group","title":"Доступная владельцу сумма","purpose":"Отдельно резервирует представление доступной владельцу суммы без отождествления с бухгалтерской или операционной прибылью.","startRow":11,"startColumn":7,"rowSpan":6,"columnSpan":6,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":null,"visibilityCondition":"cash_module_enabled","notes":"Доступные владельцу деньги не равны прибыли; блок показывается только при доступности денежного модуля."},
+    {"key":"KEY_DRIVERS","entryType":"table_placeholder","title":"Факторы результата","purpose":"Резервирует область для основных факторов, повлиявших на финансовый результат периода.","startRow":18,"startColumn":1,"rowSpan":7,"columnSpan":6,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":"SYS_CALC","visibilityCondition":"always","notes":"Сами факторы на этом этапе не формируются."},
+    {"key":"TOP_ACTIONS_AND_LIMITATIONS","entryType":"recommendation_panel","title":"Действия и ограничения","purpose":"Резервирует представление не более трёх приоритетных действий владельца вместе с ограничениями данных.","startRow":18,"startColumn":7,"rowSpan":7,"columnSpan":6,"isStaticPlaceholder":true,"formulaPolicy":"none","dataSource":"SYS_RECOMMENDATIONS","visibilityCondition":"always","notes":"Рекомендации должны содержать сигнал, причину, ожидаемое влияние, действие, уверенность, риск, ограничение и способ проверки результата."}
+  ],
+  "notes": [
+    "OWNER_DESK является layout-only схемой.",
+    "Рабочий стол разделяет закрытый факт, предварительный результат и прогноз.",
+    "Денежный блок отображается только при наличии и подтверждении денежных данных.",
+    "Доступная владельцу сумма не равна прибыли.",
+    "Статус качества данных показывается отдельно от финансовых KPI.",
+    "Формулы, реальные значения, графики и runtime-логика отсутствуют.",
+    "Все 12 блоков являются статическими placeholders текущей версии."
+  ]
+}

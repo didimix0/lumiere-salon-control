@@ -1,0 +1,419 @@
+{
+  "contractVersion": "1.0",
+  "status": "normative_machine_readable_system_schema_bundle",
+  "generatedAt": "2026-07-13T19:31:57.825Z",
+  "schemaCount": 2,
+  "sources": [
+    {
+      "document": "docs/SYSTEM_SHEETS_PHYSICAL_CONTRACT.md",
+      "version": "1.2"
+    },
+    {
+      "document": "docs/UNIVERSAL_IMPORT_SPEC.md",
+      "version": "1.1"
+    },
+    {
+      "document": "contracts/lookup-catalog.v1.json",
+      "version": "1.1"
+    }
+  ],
+  "schemas": [
+    {
+      "schemaKey": "SYS_IMPORTS",
+      "sheetName": "_SYS_IMPORTS",
+      "headerRow": 1,
+      "representation": "table",
+      "columns": [
+        {
+          "name": "import_batch_id",
+          "label": "import batch id",
+          "type": "text",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": null,
+          "note": "Системное поле import batch id.",
+          "width": 160
+        },
+        {
+          "name": "source_system",
+          "label": "source system",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле source system.",
+          "width": 180
+        },
+        {
+          "name": "file_name",
+          "label": "file name",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле file name.",
+          "width": 200
+        },
+        {
+          "name": "source_period",
+          "label": "source period",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле source period.",
+          "width": 180
+        },
+        {
+          "name": "import_started_at",
+          "label": "import started at",
+          "type": "datetime",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле import started at.",
+          "width": 160
+        },
+        {
+          "name": "import_completed_at",
+          "label": "import completed at",
+          "type": "datetime",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле import completed at.",
+          "width": 160
+        },
+        {
+          "name": "import_status",
+          "label": "import status",
+          "type": "enum",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": "import_status",
+          "note": "Системное поле import status.",
+          "width": 150
+        },
+        {
+          "name": "total_rows",
+          "label": "total rows",
+          "type": "integer",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле total rows.",
+          "width": 100
+        },
+        {
+          "name": "accepted_rows",
+          "label": "accepted rows",
+          "type": "integer",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле accepted rows.",
+          "width": 100
+        },
+        {
+          "name": "rejected_rows",
+          "label": "rejected rows",
+          "type": "integer",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле rejected rows.",
+          "width": 100
+        },
+        {
+          "name": "possible_duplicate_rows",
+          "label": "possible duplicate rows",
+          "type": "integer",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле possible duplicate rows.",
+          "width": 100
+        },
+        {
+          "name": "confirmed_duplicate_rows",
+          "label": "confirmed duplicate rows",
+          "type": "integer",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле confirmed duplicate rows.",
+          "width": 100
+        },
+        {
+          "name": "imported_by",
+          "label": "imported by",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле imported by.",
+          "width": 180
+        },
+        {
+          "name": "mapping_version",
+          "label": "mapping version",
+          "type": "integer",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле mapping version.",
+          "width": 100
+        },
+        {
+          "name": "backup_reference",
+          "label": "backup reference",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле backup reference.",
+          "width": 180
+        },
+        {
+          "name": "comment",
+          "label": "comment",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле comment.",
+          "width": 240
+        }
+      ],
+      "layout": [],
+      "notes": [
+        "Пакет импорта отделён от отдельных staging-строк; источник, файл, mapping-профиль, preview, проверка, подтверждение и commit разделены.",
+        "Канонические таблицы изменяются только после явного подтверждения; staging не является канонической таблицей; возможные дубли не удаляются и не объединяются автоматически.",
+        "Source-specific adapter является отдельным слоем; универсальный импорт не требует конкретного CRM-файла.",
+        "Схема не реализует CSV/XLSX parsing или importer runtime."
+      ],
+      "source": {
+        "document": "docs/SYSTEM_SHEETS_PHYSICAL_CONTRACT.md",
+        "section": "SYS_IMPORTS — `_SYS_IMPORTS`"
+      }
+    },
+    {
+      "schemaKey": "SYS_LOG",
+      "sheetName": "_SYS_LOG",
+      "headerRow": 1,
+      "representation": "table",
+      "columns": [
+        {
+          "name": "log_id",
+          "label": "log id",
+          "type": "text",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": null,
+          "note": "Системное поле log id.",
+          "width": 160
+        },
+        {
+          "name": "event_datetime",
+          "label": "event datetime",
+          "type": "datetime",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле event datetime.",
+          "width": 160
+        },
+        {
+          "name": "event_type",
+          "label": "event type",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле event type.",
+          "width": 180
+        },
+        {
+          "name": "user_id",
+          "label": "user id",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле user id.",
+          "width": 160
+        },
+        {
+          "name": "period_id",
+          "label": "period id",
+          "type": "text",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": null,
+          "note": "Системное поле period id.",
+          "width": 160
+        },
+        {
+          "name": "entity_type",
+          "label": "entity type",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле entity type.",
+          "width": 180
+        },
+        {
+          "name": "entity_id",
+          "label": "entity id",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле entity id.",
+          "width": 160
+        },
+        {
+          "name": "action",
+          "label": "action",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле action.",
+          "width": 180
+        },
+        {
+          "name": "previous_value",
+          "label": "previous value",
+          "type": "number",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле previous value.",
+          "width": 120
+        },
+        {
+          "name": "new_value",
+          "label": "new value",
+          "type": "number",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле new value.",
+          "width": 120
+        },
+        {
+          "name": "reason",
+          "label": "reason",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле reason.",
+          "width": 240
+        },
+        {
+          "name": "result_status",
+          "label": "result status",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле result status.",
+          "width": 180
+        },
+        {
+          "name": "technical_reference",
+          "label": "technical reference",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле technical reference.",
+          "width": 180
+        },
+        {
+          "name": "comment",
+          "label": "comment",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле comment.",
+          "width": 240
+        }
+      ],
+      "layout": [],
+      "notes": [
+        "Одна строка соответствует одному техническому событию; лог не является финансовым журналом операций; запись лога не изменяет бизнес-данные; ошибка лога не является финансовым результатом.",
+        "Не хранятся персональные данные, банковские данные, токены, пароли, секреты, полное содержимое импортируемой строки, полный stack trace или крупные payload.",
+        "Runtime-логирование на этом этапе отсутствует."
+      ],
+      "source": {
+        "document": "docs/SYSTEM_SHEETS_PHYSICAL_CONTRACT.md",
+        "section": "SYS_LOG — `_SYS_LOG`"
+      }
+    }
+  ]
+}

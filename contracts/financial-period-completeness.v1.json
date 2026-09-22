@@ -1,0 +1,32 @@
+{
+  "contract": "financial-period-completeness",
+  "version": "1.0.0",
+  "status": "accepted_physical_extension_pending_approval",
+  "storage": {
+    "schemaKey": "SYS_PERIODS",
+    "sheetName": "_SYS_PERIODS",
+    "migration": "append_only_approved_schema_migration",
+    "columns": [
+      {"name":"input_completeness_status","label":"input completeness status","type":"text","required":true,"nullable":false,"values":["incomplete","complete"],"default":"incomplete"},
+      {"name":"input_completeness_confirmed_at","label":"input completeness confirmed at","type":"datetime","required":false,"nullable":true},
+      {"name":"input_completeness_confirmed_by","label":"input completeness confirmed by","type":"text","required":false,"nullable":true},
+      {"name":"input_completeness_source","label":"input completeness source","type":"text","required":false,"nullable":true}
+    ]
+  },
+  "rules": [
+    "absence of source rows is never completeness evidence",
+    "incomplete period with no operation and refund rows has no zero-valued financial metric",
+    "complete period with no operation and refund rows is confirmed zero activity",
+    "closed period requires complete input status",
+    "complete confirmation records period_id, timestamp, actor and source",
+    "repeat confirmation of the identical state is idempotent",
+    "complete to incomplete requires controlled reopen or audited adjustment",
+    "source facts are never deleted by completeness confirmation"
+  ],
+  "approval": {
+    "schemaMigration": "separate explicit approval required",
+    "confirmation": "explicit actor action required",
+    "formulaInstallation": "separate explicit approval required"
+  },
+  "sourceOfTruth": ["docs/adr/0006-period-close-adjustments-and-history.md", "docs/adr/0017-period-input-completeness.md", "docs/FINANCIAL_LOGIC.md"]
+}

@@ -1,0 +1,552 @@
+{
+  "contractVersion": "1.0",
+  "status": "normative_machine_readable_system_schema_bundle",
+  "generatedAt": "2026-07-13T19:13:04.954Z",
+  "schemaCount": 2,
+  "sources": [
+    {
+      "document": "docs/SYSTEM_SHEETS_PHYSICAL_CONTRACT.md",
+      "version": "1.1"
+    },
+    {
+      "document": "contracts/lookup-catalog.v1.json",
+      "version": "1.0"
+    }
+  ],
+  "schemas": [
+    {
+      "schemaKey": "SYS_RECOMMENDATIONS",
+      "sheetName": "_SYS_RECOMMENDATIONS",
+      "headerRow": 1,
+      "representation": "table",
+      "columns": [
+        {
+          "name": "recommendation_id",
+          "label": "recommendation id",
+          "type": "text",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": null,
+          "note": "Системное поле recommendation id.",
+          "width": 160
+        },
+        {
+          "name": "period_id",
+          "label": "period id",
+          "type": "text",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": null,
+          "note": "Системное поле period id.",
+          "width": 160
+        },
+        {
+          "name": "rule_code",
+          "label": "rule code",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле rule code.",
+          "width": 180
+        },
+        {
+          "name": "rule_version",
+          "label": "rule version",
+          "type": "integer",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле rule version.",
+          "width": 100
+        },
+        {
+          "name": "recommendation_type",
+          "label": "recommendation type",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле recommendation type.",
+          "width": 180
+        },
+        {
+          "name": "priority",
+          "label": "priority",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле priority.",
+          "width": 180
+        },
+        {
+          "name": "title",
+          "label": "title",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле title.",
+          "width": 180
+        },
+        {
+          "name": "owner_question",
+          "label": "owner question",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле owner question.",
+          "width": 180
+        },
+        {
+          "name": "signal_description",
+          "label": "signal description",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле signal description.",
+          "width": 240
+        },
+        {
+          "name": "reason_summary",
+          "label": "reason summary",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле reason summary.",
+          "width": 240
+        },
+        {
+          "name": "financial_impact_type",
+          "label": "financial impact type",
+          "type": "enum",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": "financial_impact_type",
+          "note": "Системное поле financial impact type.",
+          "width": 150
+        },
+        {
+          "name": "financial_impact_amount",
+          "label": "financial impact amount",
+          "type": "money",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле financial impact amount.",
+          "width": 120
+        },
+        {
+          "name": "confidence_level",
+          "label": "confidence level",
+          "type": "enum",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": "confidence_level",
+          "note": "Системное поле confidence level.",
+          "width": 150
+        },
+        {
+          "name": "implementation_complexity",
+          "label": "implementation complexity",
+          "type": "enum",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": "implementation_complexity",
+          "note": "Системное поле implementation complexity.",
+          "width": 150
+        },
+        {
+          "name": "risk_level",
+          "label": "risk level",
+          "type": "enum",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": "risk_level",
+          "note": "Системное поле risk level.",
+          "width": 150
+        },
+        {
+          "name": "recommended_action",
+          "label": "recommended action",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле recommended action.",
+          "width": 180
+        },
+        {
+          "name": "limitations",
+          "label": "limitations",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле limitations.",
+          "width": 240
+        },
+        {
+          "name": "data_quality_status",
+          "label": "data quality status",
+          "type": "enum",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": "data_quality_status",
+          "note": "Системное поле data quality status.",
+          "width": 150
+        },
+        {
+          "name": "related_entity_type",
+          "label": "related entity type",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле related entity type.",
+          "width": 180
+        },
+        {
+          "name": "related_entity_id",
+          "label": "related entity id",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле related entity id.",
+          "width": 160
+        },
+        {
+          "name": "scenario_id",
+          "label": "scenario id",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле scenario id.",
+          "width": 160
+        },
+        {
+          "name": "recommendation_status",
+          "label": "recommendation status",
+          "type": "enum",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": "recommendation_status",
+          "note": "Системное поле recommendation status.",
+          "width": 150
+        },
+        {
+          "name": "generated_at",
+          "label": "generated at",
+          "type": "datetime",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле generated at.",
+          "width": 160
+        },
+        {
+          "name": "expires_at",
+          "label": "expires at",
+          "type": "datetime",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле expires at.",
+          "width": 160
+        },
+        {
+          "name": "deduplication_key",
+          "label": "deduplication key",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле deduplication key.",
+          "width": 180
+        },
+        {
+          "name": "comment",
+          "label": "comment",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле comment.",
+          "width": 240
+        }
+      ],
+      "layout": [],
+      "notes": [
+        "Рекомендация не является фактом или гарантией.",
+        "Сигнал, причина, влияние и действие не объединяются в одно поле.",
+        "Финансовое влияние может быть подтверждённым, оценочным или потенциальным согласно контракту.",
+        "Скидка не называется потерянной прибылью; простои, отмены и неявки могут быть оценкой возможности, но не автоматически подтверждённой потерей.",
+        "Уверенность, риск, сложность и ограничения отображаются явно; результат рекомендации проверяется отдельным способом.",
+        "Формулы и генерация рекомендаций отсутствуют."
+      ],
+      "source": {
+        "document": "docs/SYSTEM_SHEETS_PHYSICAL_CONTRACT.md",
+        "section": "SYS_RECOMMENDATIONS — `_SYS_RECOMMENDATIONS`"
+      }
+    },
+    {
+      "schemaKey": "SYS_DATA_QUALITY",
+      "sheetName": "_SYS_DATA_QUALITY",
+      "headerRow": 1,
+      "representation": "table",
+      "columns": [
+        {
+          "name": "data_quality_issue_id",
+          "label": "data quality issue id",
+          "type": "text",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": null,
+          "note": "Системное поле data quality issue id.",
+          "width": 160
+        },
+        {
+          "name": "period_id",
+          "label": "period id",
+          "type": "text",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": null,
+          "note": "Системное поле period id.",
+          "width": 160
+        },
+        {
+          "name": "entity_type",
+          "label": "entity type",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле entity type.",
+          "width": 180
+        },
+        {
+          "name": "entity_id",
+          "label": "entity id",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле entity id.",
+          "width": 160
+        },
+        {
+          "name": "issue_code",
+          "label": "issue code",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле issue code.",
+          "width": 180
+        },
+        {
+          "name": "severity",
+          "label": "severity",
+          "type": "enum",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": "severity",
+          "note": "Системное поле severity.",
+          "width": 150
+        },
+        {
+          "name": "issue_description",
+          "label": "issue description",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле issue description.",
+          "width": 240
+        },
+        {
+          "name": "blocked_metric",
+          "label": "blocked metric",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле blocked metric.",
+          "width": 180
+        },
+        {
+          "name": "required_action",
+          "label": "required action",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле required action.",
+          "width": 180
+        },
+        {
+          "name": "detected_at",
+          "label": "detected at",
+          "type": "datetime",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле detected at.",
+          "width": 160
+        },
+        {
+          "name": "issue_status",
+          "label": "issue status",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле issue status.",
+          "width": 180
+        },
+        {
+          "name": "resolved_at",
+          "label": "resolved at",
+          "type": "datetime",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле resolved at.",
+          "width": 160
+        },
+        {
+          "name": "resolved_by",
+          "label": "resolved by",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле resolved by.",
+          "width": 180
+        },
+        {
+          "name": "resolution_comment",
+          "label": "resolution comment",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле resolution comment.",
+          "width": 240
+        },
+        {
+          "name": "source_link",
+          "label": "source link",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле source link.",
+          "width": 180
+        }
+      ],
+      "layout": [],
+      "notes": [
+        "Качество данных не является финансовым результатом.",
+        "Блокирующая ошибка отделяется от неблокирующего предупреждения.",
+        "Отсутствие данных не заменяется нулём; проблема качества не является автоматически финансовой потерей.",
+        "Аномалия не является автоматически нарушением пользователя или мастера; возможный дубль не считается подтверждённым дублем без проверки.",
+        "Схема хранит диагностику, но не исправляет данные автоматически.",
+        "Формулы и runtime-проверки отсутствуют."
+      ],
+      "source": {
+        "document": "docs/SYSTEM_SHEETS_PHYSICAL_CONTRACT.md",
+        "section": "SYS_DATA_QUALITY — `_SYS_DATA_QUALITY`"
+      }
+    }
+  ]
+}

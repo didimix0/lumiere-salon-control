@@ -1,0 +1,369 @@
+{
+  "contractVersion": "1.0",
+  "status": "normative_machine_readable_system_schema_bundle",
+  "generatedAt": "2026-07-13T17:39:16.832Z",
+  "schemaCount": 2,
+  "sources": [
+    {
+      "document": "docs/SYSTEM_SHEETS_PHYSICAL_CONTRACT.md",
+      "version": "1.1"
+    },
+    {
+      "document": "contracts/lookup-catalog.v1.json",
+      "version": "1.0"
+    }
+  ],
+  "schemas": [
+    {
+      "schemaKey": "SYS_PERIODS",
+      "sheetName": "_SYS_PERIODS",
+      "headerRow": 1,
+      "representation": "table",
+      "columns": [
+        {
+          "name": "period_id",
+          "label": "period id",
+          "type": "text",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": null,
+          "note": "Системное поле period id.",
+          "width": 160
+        },
+        {
+          "name": "period_type",
+          "label": "period type",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле period type.",
+          "width": 180
+        },
+        {
+          "name": "date_from",
+          "label": "date from",
+          "type": "date",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле date from.",
+          "width": 110
+        },
+        {
+          "name": "date_to",
+          "label": "date to",
+          "type": "date",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле date to.",
+          "width": 110
+        },
+        {
+          "name": "period_status",
+          "label": "period status",
+          "type": "enum",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": "period_status",
+          "note": "Системное поле period status.",
+          "width": 150
+        },
+        {
+          "name": "closed_at",
+          "label": "closed at",
+          "type": "datetime",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле closed at.",
+          "width": 160
+        },
+        {
+          "name": "closed_by",
+          "label": "closed by",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле closed by.",
+          "width": 180
+        },
+        {
+          "name": "reopened_at",
+          "label": "reopened at",
+          "type": "datetime",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле reopened at.",
+          "width": 160
+        },
+        {
+          "name": "reopened_by",
+          "label": "reopened by",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле reopened by.",
+          "width": 180
+        },
+        {
+          "name": "reopen_reason",
+          "label": "reopen reason",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле reopen reason.",
+          "width": 240
+        },
+        {
+          "name": "snapshot_reference",
+          "label": "snapshot reference",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле snapshot reference.",
+          "width": 180
+        },
+        {
+          "name": "created_at",
+          "label": "created at",
+          "type": "datetime",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": null,
+          "note": "Системное поле created at.",
+          "width": 160
+        },
+        {
+          "name": "updated_at",
+          "label": "updated at",
+          "type": "datetime",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": null,
+          "note": "Системное поле updated at.",
+          "width": 160
+        },
+        {
+          "name": "comment",
+          "label": "comment",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле comment.",
+          "width": 240
+        }
+      ],
+      "layout": [],
+      "notes": [
+        "Схема хранит периоды и их состояние.",
+        "Закрытый период отделяется от текущего незакрытого периода.",
+        "Изменение статуса периода не выполняется этой схемой.",
+        "Формулы и runtime-логика отсутствуют."
+      ],
+      "source": {
+        "document": "docs/SYSTEM_SHEETS_PHYSICAL_CONTRACT.md",
+        "section": "SYS_PERIODS — `_SYS_PERIODS`"
+      }
+    },
+    {
+      "schemaKey": "SYS_CALC",
+      "sheetName": "_SYS_CALC",
+      "headerRow": 1,
+      "representation": "table",
+      "columns": [
+        {
+          "name": "calc_record_id",
+          "label": "calc record id",
+          "type": "text",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": null,
+          "note": "Системное поле calc record id.",
+          "width": 160
+        },
+        {
+          "name": "period_id",
+          "label": "period id",
+          "type": "text",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": null,
+          "note": "Системное поле period id.",
+          "width": 160
+        },
+        {
+          "name": "metric_code",
+          "label": "metric code",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле metric code.",
+          "width": 180
+        },
+        {
+          "name": "dimension_type",
+          "label": "dimension type",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле dimension type.",
+          "width": 180
+        },
+        {
+          "name": "dimension_id",
+          "label": "dimension id",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле dimension id.",
+          "width": 160
+        },
+        {
+          "name": "metric_value",
+          "label": "metric value",
+          "type": "number",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле metric value.",
+          "width": 120
+        },
+        {
+          "name": "value_unit",
+          "label": "value unit",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле value unit.",
+          "width": 180
+        },
+        {
+          "name": "data_quality_status",
+          "label": "data quality status",
+          "type": "enum",
+          "required": true,
+          "editable": false,
+          "system": true,
+          "nullable": false,
+          "enumKey": "data_quality_status",
+          "note": "Системное поле data quality status.",
+          "width": 150
+        },
+        {
+          "name": "calculation_rule_version",
+          "label": "calculation rule version",
+          "type": "integer",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле calculation rule version.",
+          "width": 100
+        },
+        {
+          "name": "source_trace_reference",
+          "label": "source trace reference",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле source trace reference.",
+          "width": 180
+        },
+        {
+          "name": "calculated_at",
+          "label": "calculated at",
+          "type": "datetime",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле calculated at.",
+          "width": 160
+        },
+        {
+          "name": "comment",
+          "label": "comment",
+          "type": "text",
+          "required": false,
+          "editable": false,
+          "system": true,
+          "nullable": true,
+          "enumKey": null,
+          "note": "Системное поле comment.",
+          "width": 240
+        }
+      ],
+      "layout": [],
+      "notes": [
+        "SYS_CALC хранит рассчитанные результаты, но не определяет формулы расчёта.",
+        "Закрытый факт, предварительный результат и прогноз не смешиваются.",
+        "Прогноз не является подтверждённым фактом.",
+        "Денежные показатели не определяют автоматически доступную владельцу сумму.",
+        "Runtime-логика отсутствует."
+      ],
+      "source": {
+        "document": "docs/SYSTEM_SHEETS_PHYSICAL_CONTRACT.md",
+        "section": "SYS_CALC — `_SYS_CALC`"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "dataset": "financial-core-costs",
+  "version": "1.0.0",
+  "periodId": "2026-07",
+  "scope": "Synthetic demonstration only; aggregated manual costs in EXPENSES, no automatic payroll or tax calculation",
+  "rows": [
+    {"expense_id":"DEMO-EXP-MATERIALS","expense_category":"Материалы","expense_nature":"Переменный операционный","amount":1500},
+    {"expense_id":"DEMO-EXP-PAY-01","expense_category":"Оплата труда","expense_nature":"Переменный операционный","amount":1800,"master_id":"DEMO-MASTER-01"},
+    {"expense_id":"DEMO-EXP-PAY-02","expense_category":"Оплата труда","expense_nature":"Переменный операционный","amount":2200,"master_id":"DEMO-MASTER-02"},
+    {"expense_id":"DEMO-EXP-RENT","expense_category":"Аренда","expense_nature":"Постоянный операционный","amount":1000},
+    {"expense_id":"DEMO-EXP-TAX","expense_category":"Налоги","expense_nature":"Переменный операционный","amount":624},
+    {"expense_id":"DEMO-EXP-FEES","expense_category":"Банковские комиссии","expense_nature":"Переменный операционный","amount":208}
+  ],
+  "common": {"recognition_date":"2026-07-31","source_type":"Ручной ввод","validation_status":"Корректна","included_in_calculation":true},
+  "rules": {
+    "payroll": "Final manually entered demo compensation with explanation; no additional computed payroll",
+    "materials": "Recognized consumption, not a purchase; 1500 retained after the 500 client refund",
+    "tax": "Manual demo tax expense of 624; not a real salon tax rate or tax recommendation",
+    "fees": "Manual final demo fee expense of 208, no automatic reversal",
+    "completeness": "Remains incomplete; all metrics preliminary",
+    "cash": "Payment dates and cash balances are not inferred"
+  },
+  "expected": {"materials":1500,"masterCompensation":4000,"operatingExpenses":1000,"tax":624,"fees":208,"totalExpenses":7332,"netRevenue":10400,"operatingProfit":3068,"operatingMargin":0.295},
+  "approval": {"property":"LC_DEMO_COSTS_APPROVAL_TOKEN","value":"demo_costs_v1"}
+}

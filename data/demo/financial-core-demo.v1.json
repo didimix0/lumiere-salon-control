@@ -1,0 +1,32 @@
+{
+  "dataset": "financial-core-demo",
+  "version": "1.0.0",
+  "purpose": "Non-client demo fixture for the first Financial Core walkthrough.",
+  "period": {
+    "periodId": "2026-07",
+    "inputCompletenessStatus": "complete",
+    "confirmationActor": "demo_seed",
+    "confirmationSource": "demo_fixture"
+  },
+  "operations": [
+    {"internalOperationId":"DEMO-OP-001","operationDate":"2026-07-05","operationStatus":"completed","serviceId":"DEMO-SVC-HAIR","masterId":"DEMO-MASTER-01","quantity":1,"listPrice":3000,"chargedAmount":3000,"includedInCalculation":true},
+    {"internalOperationId":"DEMO-OP-002","operationDate":"2026-07-12","operationStatus":"completed","serviceId":"DEMO-SVC-COLOR","masterId":"DEMO-MASTER-02","quantity":1,"listPrice":6000,"chargedAmount":5400,"includedInCalculation":true},
+    {"internalOperationId":"DEMO-OP-003","operationDate":"2026-07-17","operationStatus":"completed","serviceId":"DEMO-SVC-NAIL","masterId":"DEMO-MASTER-01","quantity":1,"listPrice":2500,"chargedAmount":2500,"includedInCalculation":true},
+    {"internalOperationId":"DEMO-OP-004","operationDate":"2026-07-22","operationStatus":"cancelled","serviceId":"DEMO-SVC-HAIR","masterId":"DEMO-MASTER-01","quantity":1,"listPrice":2800,"chargedAmount":0,"includedInCalculation":false}
+  ],
+  "refunds": [
+    {"refundId":"DEMO-REF-001","originalOperationId":"DEMO-OP-001","refundDate":"2026-07-20","refundAmount":500,"includedInCalculation":true}
+  ],
+  "expectedMetrics": {
+    "gross_list_service_value":11500,
+    "recognized_service_revenue_before_refunds":10900,
+    "total_service_discounts":600,
+    "total_service_refunds":500,
+    "net_service_revenue":10400
+  },
+  "safety": {
+    "containsClientData":false,
+    "loadPolicy":"approval_gated_append_only",
+    "sourceRowsMustNotBeOverwritten":true
+  }
+}
